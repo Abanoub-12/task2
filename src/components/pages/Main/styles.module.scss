@@ -1,0 +1,44 @@
+@use '../../../styles/mixins' as *;
+@use '../../../app/styles/root-variables' as *;
+
+.mainRoot {
+  height: 100%;
+  padding: 24px;
+  overflow: auto;
+}
+
+.repositoriesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.repositoryItem {
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    margin-bottom: 8px;
+    color: var(--primary-color);
+  }
+
+  p {
+    margin-bottom: 8px;
+    color: var(--text-secondary-color);
+  }
+
+  span {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: var(--bg-secondary-color);
+    border-radius: 4px;
+    font-size: 12px;
+  }
+}
